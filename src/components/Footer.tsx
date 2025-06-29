@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Building, Mail, Phone, Globe } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SocialShare from './SocialShare';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -10,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="bg-black/40 backdrop-blur-sm border-t border-white/10 py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -25,7 +26,7 @@ const Footer = () => {
               <span className="text-white font-bold text-xl">EGIT</span>
             </div>
             <p className="text-slate-300 leading-relaxed">
-              Leading provider of comprehensive financial and industrial consulting services.
+              {t('about.description').substring(0, 120)}...
             </p>
           </motion.div>
 
@@ -36,15 +37,21 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 0.6 }}
           >
-            <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{t('nav.home')}</h3>
             <div className="space-y-2">
-              {['Home', 'About', 'Services', 'Clients', 'Contact'].map((link) => (
+              {[
+                { key: 'nav.home', href: '#home' },
+                { key: 'nav.about', href: '#about' },
+                { key: 'nav.services', href: '#services' },
+                { key: 'nav.clients', href: '#clients' },
+                { key: 'nav.contact', href: '#contact' }
+              ].map((link) => (
                 <a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
+                  key={link.key}
+                  href={link.href}
                   className="block text-slate-300 hover:text-cyan-400 transition-colors"
                 >
-                  {link}
+                  {t(link.key)}
                 </a>
               ))}
             </div>
@@ -57,7 +64,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <h3 className="text-white font-semibold text-lg mb-4">Contact</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{t('contact.info')}</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-cyan-400" />
@@ -72,6 +79,16 @@ const Footer = () => {
                 <span className="text-slate-300">www.egitconsulting.online</span>
               </div>
             </div>
+          </motion.div>
+
+          {/* Social Media */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
+            <SocialShare />
           </motion.div>
         </div>
 
