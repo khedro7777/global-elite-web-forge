@@ -27,26 +27,6 @@ const About = () => {
       icon: Lightbulb,
       title: "Innovation",
       description: "Cutting-edge solutions for modern business challenges"
-    },
-    {
-      icon: Building,
-      title: "Industrial Solutions",
-      description: "Advanced industrial consulting and process optimization"
-    },
-    {
-      icon: Briefcase,
-      title: "Business Advisory",
-      description: "Professional business advisory and management consulting"
-    },
-    {
-      icon: Globe,
-      title: "Global Reach",
-      description: "International expertise with local market knowledge"
-    },
-    {
-      icon: TrendingUp,
-      title: "Growth Focus",
-      description: "Driving sustainable growth and operational excellence"
     }
   ];
 
@@ -67,17 +47,14 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            {t('about.title')}
+            About Us
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-8" />
-          <p className="text-slate-300 text-xl max-w-3xl mx-auto leading-relaxed">
-            Leading provider of comprehensive financial and industrial consulting services with over 15 years of excellence
-          </p>
         </motion.div>
 
-        {/* Main Content with Industrial Image */}
+        {/* About Us Content */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-          {/* Left Side - Industrial Excellence Image */}
+          {/* Left Side - Team Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -87,31 +64,12 @@ const About = () => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/lovable-uploads/9aadb49b-87f0-41f3-9775-c31410379ec3.png"
-                alt="Industrial Consulting Excellence"
+                src="/lovable-uploads/1c2ab0fb-33d1-45b4-ba8b-f194a3594758.png"
+                alt="EGIT Professional Team"
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-black/40 backdrop-blur-sm rounded-lg p-4">
-                  <h4 className="text-white font-bold text-lg mb-2">Industrial Excellence</h4>
-                  <p className="text-slate-200 text-sm">Advanced manufacturing and industrial process consulting</p>
-                </div>
-              </div>
             </div>
-            
-            {/* Floating Achievement Card */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="absolute -bottom-8 -right-8 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 backdrop-blur-md rounded-xl p-6 border border-white/20"
-            >
-              <div className="text-3xl font-bold text-cyan-400 mb-2">15+</div>
-              <div className="text-white font-medium">Years of Excellence</div>
-              <div className="text-slate-300 text-sm">Industry Leadership</div>
-            </motion.div>
           </motion.div>
 
           {/* Right Side - Content */}
@@ -120,29 +78,25 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
           >
-            <h3 className="text-3xl font-bold text-white mb-6">
-              Leading Financial & Industrial Consulting
-            </h3>
-            <p className="text-slate-300 text-lg leading-relaxed mb-6">
-              {t('about.description')}
-            </p>
-            <p className="text-slate-300 text-lg leading-relaxed mb-8">
-              Our comprehensive approach combines deep industry knowledge with innovative solutions, 
-              delivering measurable results for businesses across various sectors including manufacturing, 
-              finance, technology, and industrial operations.
-            </p>
-
-            {/* Key Metrics */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
-                <div className="text-2xl font-bold text-cyan-400">200+</div>
-                <div className="text-slate-300 text-sm">Projects Delivered</div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
-                <div className="text-2xl font-bold text-blue-400">99%</div>
-                <div className="text-slate-300 text-sm">Client Satisfaction</div>
-              </div>
+            <h3 className="text-3xl font-bold text-white mb-6">About Us</h3>
+            <div className="text-slate-300 text-lg leading-relaxed space-y-4">
+              <p>
+                We listen to your unique needs and objectives, and then craft customized strategies that leverage my regional expertise and our team's diverse skill set.
+              </p>
+              <p>
+                <strong className="text-cyan-400">Proven track record:</strong> From securing funding for promising startups to optimizing operations for established companies, we have a history of delivering quantifiable results and exceeding expectations. Our success stories speak for themselves.
+              </p>
+              <p>
+                <strong className="text-cyan-400">Client-centric approach:</strong> We believe in building strong partnerships with our clients. We are invested in your success and work alongside you every step of the way, providing ongoing support and guidance.
+              </p>
+              <p>
+                <strong className="text-cyan-400">Innovative mindset:</strong> We stay ahead of the curve, embracing new technologies and data-driven insights to provide you with the most effective solutions. We believe in continuously improving and adapting to ensure your success in the ever-evolving market.
+              </p>
+              <p>
+                Together, we can achieve your financial, marketing, and investment goals. Together, we can unlock your growth potential and set your business on the path to success.
+              </p>
             </div>
           </motion.div>
         </div>
@@ -174,7 +128,7 @@ const About = () => {
           </div>
         </motion.div>
 
-        {/* Client Portfolio Display */}
+        {/* Leadership Meeting Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -183,14 +137,14 @@ const About = () => {
           className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
         >
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Our Prestigious Client Portfolio</h3>
-            <p className="text-slate-400">Building successful partnerships with industry leaders worldwide</p>
+            <h3 className="text-2xl font-bold text-white mb-4">Strategic Leadership & Partnership</h3>
+            <p className="text-slate-400">Building strategic alliances and fostering industry collaboration</p>
           </div>
           
           <div className="relative overflow-hidden rounded-xl">
             <img
-              src="/lovable-uploads/45df2bd7-2f7e-4807-95b7-0840ce1a98cf.png"
-              alt="Client Portfolio - Industry Leaders and Partners"
+              src="/lovable-uploads/73eb6c53-fc9e-46b7-bc07-9455575fd8a5.png"
+              alt="EGIT Strategic Leadership Meeting"
               className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
